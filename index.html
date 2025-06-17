@@ -1,32 +1,100 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Karen's Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 </head>
 <body>
-  <h1>Hello, I'm Kareen Chhangani</h1>
-  <p>This is my portfolio website.</p>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <h1>Hi, I'm Kareen Chhangani! 👋</h1>
+    <h2>I am a <span class="typing"></span></h2>
+    <p>A passionate student & web enthusiast</p>
+    <button onclick="toggleTheme()">🌗 Toggle Theme</button><br>
+    <a href="resume.pdf" download class="btn">📄 Download Resume</a>
+    <img src="profile.jpeg" alt="Karen" class="profile-img"/>
+  </header>
 
-  <h2>About Me</h2>
-  <p>As a first-year Computer Science student, I’m not just learning to code; I’m learning to think differently, solve creatively, and adapt constantly. I’m drawn to technology because it challenges limits—and I’m here to challenge mine.
-Whether I’m debugging my first real project or diving into the logic behind algorithms, I approach every step with curiosity, focus, and the mindset that effort compounds over time. Good days teach me. Tough ones shape me.
-I'm not here because I know everything—I'm here because I'm ready to learn anything.</p>
+  <main>
+    <section id="about" data-aos="fade-up">
+      <h2>About Me</h2>
+      <p>As a first-year Computer Science student, I’m not just learning to code; I’m learning to think differently, solve creatively, and adapt constantly. I’m drawn to technology because it challenges limits—and I’m here to challenge mine.</p>
+      <p>Whether I’m debugging my first real project or diving into the logic behind algorithms, I approach every step with curiosity, focus, and the mindset that effort compounds over time. Good days teach me. Tough ones shape me.</p>
+      <p>I'm not here because I know everything—I'm here because I'm ready to learn anything.</p>
 
-  <h2>Skills</h2>
-  <ul>
-    <li>HTML</li>
-    <li>CSS</li>
-    <li>JavaScript</li>
-  </ul>
+      <h3>Internship</h3>
+      <p><strong>Cybersecurity Intern at Amsys</strong></p>
+      <ul>
+        <li>Monitored ticketing systems for security issues</li>
+        <li>Assisted with identifying potential threats</li>
+        <li>Documented incident responses and supported day-to-day operations</li>
+      </ul>
 
-  <h2>Projects</h2>
-  <p>Talk about your projects.</p>
+      <h3>Campus Leadership & Roles</h3>
+      <ul>
+        <li>President – International Student Organization</li>
+        <li>Secretary – Global Ambassadors</li>
+        <li>Member – Global Borders</li>
+        <li>Social Media – Behrend Beacon</li>
+      </ul>
+    </section>
 
+    <section id="education" data-aos="fade-up">
+      <h2>Education</h2>
+      <p><strong>Pennsylvania State University</strong><br>B.S. in Computer Science – First Year</p>
+    </section>
 
-  <h2>Contact</h2>
-  <p>Email: Kzc5956@psu.com</p>
+    <section id="skills" data-aos="fade-up">
+      <h2>Skills</h2>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>GitHub</li>
+        <li>Cybersecurity Fundamentals</li>
+      </ul>
+    </section>
 
-  <script src="script.js"></script>
+    <section id="projects" data-aos="fade-up">
+      <h2>Projects</h2>
+      <p>Check out my <a href="https://github.com/karen-codes25" target="_blank">GitHub</a> for more.</p>
+    </section>
+
+    <section id="contact" data-aos="fade-up">
+      <h2>Contact</h2>
+      <p>Email: karen@example.com</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Karen C</p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    var typed = new Typed(".typing", {
+      strings: ["Web Developer", "CS Student", "Learner"],
+      typeSpeed: 100,
+      backSpeed: 50,
+      loop: true
+    });
+    function toggleTheme() {
+      document.body.classList.toggle("dark-mode");
+    }
+  </script>
 </body>
 </html>
+
